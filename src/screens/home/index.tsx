@@ -29,6 +29,8 @@ export default function Home() {
   const [isEraser, setIsEraser] = useState(false);
   const [showAnalysis, setShowAnalysis] = useState(false);
 
+  console.log(showAnalysis)
+
   useEffect(() => {
     if (latexExpression.length > 0 && window.MathJax) {
       setTimeout(() => {
@@ -251,7 +253,7 @@ export default function Home() {
           <Draggable
             key={index}
             position={latexPosition}
-            onDrag={(e, data) => {
+            onDrag={(_, data) => {
               setLatexPosition({ x: data.x, y: data.y });
             }}
           >
