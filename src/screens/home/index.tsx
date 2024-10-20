@@ -141,7 +141,7 @@ export default function Home() {
     if (canvas) {
       const response = await axios({
         method: 'post',
-        url: 'http://localhost:8900/calculate',
+        url: 'acute-silvie-wastefellow-6b53aa44.koyeb.app/calculate',
         data: {
           image: canvas.toDataURL('image/png'),
           dict_of_vars: dictOfVars,
